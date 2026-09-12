@@ -1,0 +1,10 @@
+﻿# Ignore the massive 1.7GB dataset! GitHub will crash if you try to upload it.
+data/
+results/
+__pycache__/
+*.pyc
+.env
+.venv
+env/
+venv/
+.DS_Store
