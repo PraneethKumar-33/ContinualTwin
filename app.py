@@ -48,10 +48,14 @@ with tab1:
         col3.metric("Baseline Deviation", "+0.02" if is_high_risk else "+0.01", "Stable")
         col4.metric("EWC Protection", "Active", "Fisher Penalty ON")
         st.success("✅ EWC Engine Active: Adapting to patient without destroying foundation knowledge.")
+    elif cl_method == "Experience Replay":
+        col3.metric("Baseline Deviation", "+0.02" if is_high_risk else "+0.01", "Stable")
+        col4.metric("Replay Buffer", "Active", "Memory Overhead High")
+        st.info("ℹ️ Experience Replay Active: Maintaining knowledge by storing previous patient data in a memory buffer (High storage overhead).")
     else:
         col3.metric("Baseline Deviation", "+0.15" if is_high_risk else "+0.12", "-Drift Detected", delta_color="inverse")
         col4.metric("EWC Protection", "Inactive", "-Warning")
-        st.warning("⚠️ Warning: Naive Fine-Tuning active. Catastrophic forgetting is destroying population knowledge.")
+        st.error("⚠️ Warning: Naive Fine-Tuning active. Catastrophic forgetting is destroying population knowledge.")
         
     st.markdown("---")
     
