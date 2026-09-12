@@ -39,15 +39,15 @@ Once the Digital Twin is created, it monitors the patient's incoming ECG stream.
 ## 🚀 How to Run (One-Command End-to-End)
 This repository satisfies the hackathon reproducibility rules (Seed=42 locked). To run the entire pipeline end-to-end (data parsing, model training, graph generation, and dashboard launching), simply execute the batch script:
 
-`ash
+```bash
 run.bat
-`
+```
 
-*(Note: Ensure 	orch torchvision pandas wfdb streamlit plotly numpy pyyaml are installed first).*
+*(Note: Ensure `torch torchvision pandas wfdb streamlit plotly numpy pyyaml` are installed first).*
 
 ## 📁 Project Structure
-- pp.py: The interactive Streamlit dashboard (Live UI)
-- main.py: The training loop for Population Pretraining and Continual Learning adaptation
-- src/model.py: The lightweight 1D ResNet architecture
-- src/ewc.py: The Elastic Weight Consolidation (Fisher Information Matrix) algorithm
-- Report.md: Our official academic submission report
+- `app.py`: The interactive Streamlit dashboard (Live UI)
+- `main.py`: The training loop for Population Pretraining and Continual Learning adaptation
+- `src/model.py`: The lightweight 1D ResNet architecture
+- `src/ewc.py`: The Elastic Weight Consolidation (Fisher Information Matrix) algorithm
+- `Report.md`: Our official academic submission report
