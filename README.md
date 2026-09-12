@@ -1,4 +1,4 @@
-﻿# 🫀 ContinualTwin: Personalized Cardiac Digital Twin
+# 🫀 ContinualTwin: Personalized Cardiac Digital Twin
 
 ![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
@@ -46,8 +46,22 @@ run.bat
 *(Note: Ensure `torch torchvision pandas wfdb streamlit plotly numpy pyyaml` are installed first).*
 
 ## 📁 Project Structure
-- `app.py`: The interactive Streamlit dashboard (Live UI)
-- `main.py`: The training loop for Population Pretraining and Continual Learning adaptation
-- `src/model.py`: The lightweight 1D ResNet architecture
-- `src/ewc.py`: The Elastic Weight Consolidation (Fisher Information Matrix) algorithm
-- `Report.md`: Our official academic submission report
+```text
+ContinualTwin/
+├── app.py                  # Streamlit Interactive Dashboard
+├── main.py                 # Core Continual Learning Training Loop
+├── demo_anomaly.py         # Script to generate Anomaly Detection Graphs
+├── config.yaml             # Hyperparameter configuration
+├── run.bat                 # One-Click execution script for Judges
+├── Report.md               # 4-Page Academic Report
+├── README.md               # Project documentation
+├── assets/                 # Images and media for documentation
+│   └── anomaly_demo.png
+└── src/
+    ├── model.py            # 1D ResNet Neural Network Architecture
+    ├── ewc.py              # Elastic Weight Consolidation (Fisher Matrix) Algorithm
+    ├── replay_buffer.py    # Experience Replay baseline implementation
+    ├── dataset.py          # PyTorch Dataloaders and Train/Val/Test Split
+    ├── anomaly_detection.py# Cosine Similarity inference logic
+    └── process_local_data.py # WFDB Parser for the massive PTB-XL ECG dataset
+```
